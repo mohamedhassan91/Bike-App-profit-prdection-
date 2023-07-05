@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v7 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="static/css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				{% if profit %}
+				   <p style="font-size: 25px;"> The predicted profit is : <b>{{profit}}</b></span> USD</p>
+				{% endif %}
+				<form action="/predict" method="Get">
+					<h3>Bike sharing app</h3>
+					<p>predecting bikes shared profit.</p>
+					<label class="form-group">
+						<input type="checkbox" id="vehicle1" name="is_holiday" value="1">
+						<span for="">is_holiday</span>
+						<span class="border"></span>
+					</label>
+					<br>
+					<label class="form-group">
+						<input type="checkbox" id="vehicle1" name="is_working_day" value="1">
+						<span for="">is_working_day</span>
+					</label>	
+					<br>
+					<label class="form-group">
+						<input type="number" class="form-control" name="temp">
+						<span> temp </span>
+						<span class="border"></span>
+					</label>
+					<br>
+					<label class="form-group">
+						<input type="number" class="form-control" name="humidity">
+						<span> humidity </span>
+						<span class="border"></span>
+					</label>
+					<br>
+					<label class="form-group">
+						<input type="number" class="form-control" name="windspeed">
+						<span> wind speed </span>
+						<span class="border"></span>
+					</label>
+					<br>
+					<label class="form-group">
+						<input type="number" class="form-control" name="rented_bikes_count">
+						<span> rented_bikes_count </span>
+						<span class="border"></span>
+					<br>
+					<label class="form-group">
+						<input type="number" class="form-control" name="Month"min=1 max =12>
+						<span>Month</span>
+						<span class="border"></span>
+					<br>
+					<label class="form-group">
+						<input type="number" class="form-control" name="Hour"min=0 max =23>
+						<span>Hour</span>
+						<span class="border"></span>
+					<br>	
+					<label class="form-group">
+							<span>season</span>
+							<select name="season">
+								<option value="spring">spring</option>
+								<option value="summer">summer</option>
+								<option value="winter">winter</option>
+								<option value="fall">fall</option>
+							  </select>
+						</label>	
+					<br>
+					<label class="form-group">
+						<span>weather</span>
+						<select name="weather">
+							<option value="clear">clear</option>
+							<option value="mist">mist</option>
+							<option value="rainy">rainy</option>
+							<option value="snowy">snowy</option>
+						  </select>
+					</label>
+					<br>
+					<label class="form-group">
+						<span>week day</span>
+						<select name="weekday">
+							<option value="saturday">Monday</option>
+							<option value="Sunday">Saturday</option>
+							<option value="Monday">Sunday</option>
+							<option value="Tuesday">Thursday</option>
+							<option value="Wednesday">Tuesday</option>
+							<option value="Thursday">Wednesday</option>
+						  </select>
+					</label>
+					<br>
+					<button type = 'submit'>Predict
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<br>
+				</form>
+			</div>
+		</div>
+		
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
