@@ -1,9 +1,9 @@
 # Bike-App-profit-prdection-
 
 
-# web app to predict the profit of the bikes
+## web app to predict the profit of the bikes
 
-# steps to run the app on your local machine 
+## steps to run the app on your local machine 
  * create your virtual env and activate it
  
 ```
